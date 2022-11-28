@@ -26,7 +26,7 @@ OBJECTS_TEST = $(filter-out ./objs/main.o, $(OBJECTS))
 all: $(NAME)
 
 $(NAME): $(OBJECTS) 
-	@$(CC) -o $(NAME) $(OBJECTS)
+	@$(CC) -o $(NAME) $(OBJECTS) -pthread
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
 	@$(MKDIR) $(OBJS_PATH)
