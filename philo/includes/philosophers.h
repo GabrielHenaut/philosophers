@@ -71,4 +71,7 @@ int			check_args(int argc, char **argv, t_args *args);
 // error.c
 int			error(int error_code);
 
+//main.c
+void		death_checker(t_args *args, t_philo *philos);
+
 #endif

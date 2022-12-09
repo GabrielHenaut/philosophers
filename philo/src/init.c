@@ -81,6 +81,12 @@ int	check_args(int argc, char **argv, t_args *args)
 		return (1);
 	if (init_args(argc, argv, args))
 		return (1);
+	if (args->nbr_of_philo == 1)
+	{
+		printf("0 1 has taken a fork\n");
+		printf("%i 1 has died\n", args->time_to_die);
+		return (4);
+	}
 	if (init_mutex(args))
 		return (2);
 	init_philos(args);

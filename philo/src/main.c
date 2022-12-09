@@ -41,7 +41,7 @@ void	death_checker(t_args *args, t_philo *philos)
 			usleep(100);
 		}
 		if (args->someone_died)
-			break ;
+			return ;
 		i = 0;
 		while (args->min_eats != -1 && i < args->nbr_of_philo \
 				&& philos[i].times_ate >= args->min_eats)
